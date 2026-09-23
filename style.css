@@ -24,3 +24,291 @@ h1{font-size:clamp(3.5rem,8vw,7.5rem);max-width:850px}h1 em,h2 em{font-style:ita
 footer{display:flex;justify-content:space-between;padding:25px 8vw;font-size:.68rem;color:var(--muted)}
 @media(max-width:800px){.site-header{padding:0 6vw}.menu-btn{display:block}.nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:25px 6vw;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.nav.open{display:flex}.hero{grid-template-columns:1fr;padding:70px 7vw;min-height:auto}.hero-art{min-height:390px}.frame{width:68%}.section{padding:80px 7vw}.about-grid,.skills-layout{grid-template-columns:1fr;gap:45px}.project-grid{grid-template-columns:1fr;gap:35px}.process-grid{grid-template-columns:1fr 1fr}.process-grid>div{border-bottom:1px solid var(--ink);padding:22px 10px 22px 0}.process-grid>div:not(:first-child){padding-left:10px}.section-head{display:block}.section-head p{margin-top:-25px;margin-bottom:35px}footer{padding:22px 7vw;gap:20px;flex-direction:column}}
 @media(max-width:480px){h1{font-size:3.25rem}.hero{padding-top:55px}.hero-art{min-height:340px}.orb-one{width:230px;height:230px}.orb-two{width:135px;height:135px}.frame{width:73%;padding:25px}.project-visual{aspect-ratio:1.05}.process-grid{grid-template-columns:1fr}.process-grid>div:not(:first-child){padding-left:0}.education-card{padding:30px}.contact{padding:100px 7vw}.contact h2{font-size:4.2rem}}
+.project-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    opacity: 0.7;
+    transform: translateX(4px);
+}
+/* ============================= */
+/* MOBILE PORTFOLIO POLISH */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 24px;
+    }
+
+    #navMenu {
+        position: absolute;
+        top: 75px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        background: var(--background);
+        border: 1px solid rgba(255,255,255,0.1);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    #navMenu.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+        padding: 120px 6% 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 14vw, 72px);
+        line-height: 0.95;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .hero-buttons .button {
+        text-align: center;
+        width: 100%;
+    }
+
+
+    /* HERO ART */
+
+    .hero-art {
+        width: 100%;
+        margin-top: 60px;
+        min-height: 350px;
+    }
+
+    .art-card {
+        width: 220px;
+        height: 280px;
+    }
+
+
+    /* MOVING TEXT */
+
+    .moving-text {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+
+    /* GENERAL SECTIONS */
+
+    .section {
+        padding: 75px 6%;
+    }
+
+    .section-number {
+        font-size: 11px;
+        margin-bottom: 35px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about h2 {
+        font-size: clamp(38px, 10vw, 58px);
+        line-height: 1;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .direction {
+        margin-top: 35px;
+    }
+
+
+    /* WORK */
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 45px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project-image {
+        min-height: 320px;
+    }
+
+    .project-image h3 {
+        font-size: 42px;
+        line-height: 0.95;
+    }
+
+    .project-info {
+        padding-top: 22px;
+    }
+
+    .project-info h3 {
+        font-size: 28px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .project-link {
+        font-size: 12px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .skills h2 {
+        font-size: clamp(40px, 10vw, 58px);
+        line-height: 1;
+    }
+
+    .skill {
+        padding: 18px 0;
+        gap: 12px;
+    }
+
+    .skill strong {
+        font-size: 15px;
+    }
+
+
+    /* PROCESS */
+
+    .process h2 {
+        font-size: clamp(55px, 15vw, 85px);
+        line-height: 0.9;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 50px;
+    }
+
+    .process-grid div {
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+
+    /* EDUCATION */
+
+    .education-card {
+        padding: 35px 25px;
+    }
+
+    .education-card h2 {
+        font-size: 32px;
+        line-height: 1;
+        margin: 15px 0;
+    }
+
+    .courses {
+        gap: 8px;
+    }
+
+    .courses span {
+        font-size: 11px;
+    }
+
+
+    /* CONTACT */
+
+    .contact {
+        padding: 90px 6%;
+        text-align: left;
+    }
+
+    .contact h2 {
+        font-size: clamp(48px, 13vw, 75px);
+        line-height: 0.95;
+    }
+
+    .contact a {
+        font-size: 18px;
+        word-break: break-word;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 30px 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+      }
